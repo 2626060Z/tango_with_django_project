@@ -1,0 +1,12 @@
+// create the whole django project
+django-admin.py startproject tango_with_django_project
+
+// create the rango application
+python manage.py startapp rango
+
+// run the project
+python manage.py runserver
+
+// test the new application
+python manage.py test rango.tests_chapter3
+
