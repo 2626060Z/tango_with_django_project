@@ -20,7 +20,7 @@
 import os
 import re
 import inspect
-from templates.rango.models import Category, Page
+from rango.models import Category, Page
 from populate_rango import populate
 from django.test import TestCase
 from django.conf import settings

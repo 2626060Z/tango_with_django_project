@@ -19,7 +19,7 @@
 
 import os
 import inspect
-from templates.rango.models import Category, Page
+from rango.models import Category, Page
 from populate_rango import populate
 from django.test import TestCase
 from django.urls import reverse, resolve
@@ -50,11 +50,11 @@ class Chapter7FormClassTests(TestCase):
         Does the CategoryForm implementation exist, and does it contain the correct instance variables?
         """
         # Check that we can import CategoryForm.
-        import templates.rango.forms
-        self.assertTrue('CategoryForm' in dir(templates.rango.forms),
+        import rango.forms
+        self.assertTrue('CategoryForm' in dir(rango.forms),
                         f"{FAILURE_HEADER}The class CategoryForm could not be found in Rango's forms.py module. Check you have created this class in the correct location, and try again.{FAILURE_FOOTER}")
 
-        from templates.rango.forms import CategoryForm
+        from rango.forms import CategoryForm
         category_form = CategoryForm()
 
         # Do you correctly link Category to CategoryForm?
@@ -168,11 +168,11 @@ class Chapter7PageFormClassTests(TestCase):
         Does the PageForm implementation exist, and does it contain the correct instance variables?
         """
         # Check that we can import PageForm.
-        import templates.rango.forms
-        self.assertTrue('PageForm' in dir(templates.rango.forms),
+        import rango.forms
+        self.assertTrue('PageForm' in dir(rango.forms),
                         f"{FAILURE_HEADER}The class PageForm could not be found in Rango's forms.py module. Check you have created this class in the correct location, and try again.{FAILURE_FOOTER}")
 
-        from templates.rango.forms import PageForm
+        from rango.forms import PageForm
         page_form = PageForm()
 
         # Do you correctly link Page to PageForm?

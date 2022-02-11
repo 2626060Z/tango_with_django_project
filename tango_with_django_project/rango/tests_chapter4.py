@@ -87,8 +87,8 @@ class Chapter4TemplatesStructureTests(TestCase):
         """
         Do the index.html and about.html templates exist in the correct place?
         """
-        index_path = os.path.join(self.rango_templates_dir, 'index.html')
-        about_path = os.path.join(self.rango_templates_dir, 'about.html')
+        index_path = os.path.join(self.rango_templates_dir, '../templates/rango/index.html')
+        about_path = os.path.join(self.rango_templates_dir, '../templates/rango/about.html')
 
         self.assertTrue(os.path.isfile(index_path),
                         f"{FAILURE_HEADER}Your index.html template does not exist, or is in the wrong location.{FAILURE_FOOTER}")
@@ -254,7 +254,7 @@ class Chapter4ExerciseTests(TestCase):
         """
         Tests the about template -- if it exists, and whether or not the about() view makes use of it.
         """
-        template_exists = os.path.isfile(os.path.join(self.template_dir, 'about.html'))
+        template_exists = os.path.isfile(os.path.join(self.template_dir, '../templates/rango/about.html'))
         self.assertTrue(template_exists,
                         f"{FAILURE_HEADER}The about.html template was not found in the expected location.{FAILURE_FOOTER}")
 

@@ -5,6 +5,9 @@
     Add a Page
 {% endblock %}
 
+{% block sidebar_block %}
+{% endblock %}
+
 {% block body_block %}
     <div>
         <form id="page_form" method="post" action="/rango/category/{{category.slug}}/add_page/">

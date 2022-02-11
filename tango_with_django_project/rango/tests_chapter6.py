@@ -21,7 +21,7 @@ import os
 import re  # We use regular expressions to do more in-depth checks on generated HTML output from views.
 import warnings
 import importlib
-from templates.rango.models import Category, Page
+from rango.models import Category, Page
 from populate_rango import populate
 from django.urls import reverse
 from django.test import TestCase

@@ -20,7 +20,7 @@
 import os
 import warnings
 import importlib
-from templates.rango.models import Category, Page
+from rango.models import Category, Page
 from django.urls import reverse
 from django.test import TestCase
 from django.conf import settings
